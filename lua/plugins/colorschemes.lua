@@ -1,14 +1,26 @@
 return {
-    -- the current theme is nordic.
-    {
-        'AlexvZyl/nordic.nvim',
-        name = 'nordic',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require 'nordic'.load()
-        end
-    },
-    {'catppuccin/nvim', name = 'catppuccin', priority = 1000},
-    {'nordtheme/vim', name = 'nord', priority = 1000},
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+		config = function()
+			require("kanagawa").load()
+		end,
+	},
+	{
+		"AlexvZyl/nordic.nvim",
+		name = "nordic",
+		lazy = false,
+	},
+	{
+		"sainnhe/everforest",
+		name = "everforest",
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+	},
+	{
+		"nordtheme/vim",
+		name = "nord",
+	},
 }
