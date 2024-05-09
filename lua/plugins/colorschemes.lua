@@ -1,10 +1,6 @@
 return {
 	{
 		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		config = function()
-			require("kanagawa").load()
-		end,
 	},
 	{
 		"AlexvZyl/nordic.nvim",
@@ -22,5 +18,13 @@ return {
 	{
 		"nordtheme/vim",
 		name = "nord",
+	},
+	{
+		"Shadorain/shadotheme",
+		name = "shado",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("shado")
+		end,
 	},
 }
