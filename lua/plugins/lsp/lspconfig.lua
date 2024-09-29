@@ -46,7 +46,10 @@ return {
         lspconfig["clangd"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            filetypes = { "c", "cpp" },
+            cmd = {
+                "clangd",
+                "--fallback-style=webkit"
+            },
         })
 
         lspconfig["gopls"].setup({
@@ -73,6 +76,11 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
             filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+        })
+
+        lspconfig["pylsp"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
         })
 
         lspconfig["pyright"].setup({
