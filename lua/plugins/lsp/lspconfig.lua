@@ -62,6 +62,12 @@ return {
             on_attach = on_attach,
         })
 
+        lspconfig["htmx"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { "html" }
+        })
+
         lspconfig["ts_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
