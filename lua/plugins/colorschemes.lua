@@ -9,6 +9,11 @@ return {
     {
         "sainnhe/everforest",
         name = "everforest",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("everforest")
+        end,
     },
     {
         "catppuccin/nvim",
@@ -21,11 +26,6 @@ return {
     {
         "nordtheme/vim",
         name = "nord",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme("nordic")
-        end,
     },
     {
         "Shadorain/shadotheme",

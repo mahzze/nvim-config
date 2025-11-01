@@ -1,8 +1,12 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fv", vim.cmd.Ex)
 vim.keymap.set("i", "jk", "<ESC>")
-vim.keymap.set("n", "<leader>q", vim.cmd.bdelete)
+vim.keymap.set("n", "Q", vim.cmd.bdelete)
+vim.keymap.set("n", "H", vim.cmd.bnext)
+vim.keymap.set("n", "L", vim.cmd.bprevious)
+
+vim.keymap.set("n", "<leader>D", vim.diagnostic.open_float)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -20,7 +24,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
